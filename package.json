@@ -1,0 +1,32 @@
+{
+  "name": "merge-sort-visualizer",
+  "version": "1.0.0",
+  "description": "Interactive merge sort visualization and tutorial",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "c8 vitest run"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
+    "@biomejs/biome": "2.4.8",
+    "@lhci/cli": "^0.15.1",
+    "c8": "^11.0.0",
+    "jscpd": "^4.0.8",
+    "jsdom": "^29.0.1",
+    "knip": "^6.0.2",
+    "madge": "^8.0.0",
+    "playwright": "^1.58.2",
+    "stylelint": "^17.5.0",
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.1",
+    "vitest": "^2.1.9"
+  },
+  "dependencies": {
+    "@oxc-parser/binding-win32-x64-msvc": "^0.121.0"
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>병합정렬 시각화 튜토리얼</title>
+  <script type="module" crossorigin src="/assets/index-DFqNbi9L.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bzou05-N.css">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <header class="app-header">
+      <h1 class="app-header__title">병합정렬 <span>Merge Sort</span></h1>
+      <div class="app-header__actions">
+        <button id="theme-btn" class="theme-toggle" aria-label="테마 변경">☀️</button>
+      </div>
+    </header>
+
+    <section class="control-section">
+      <div class="array-control">
+        <button id="generate-btn" class="controls__btn" style="width:auto;padding:0 0.75rem;">새 배열</button>
+        <label>
+          크기
+          <input type="range" id="array-size" class="controls__slider" min="4" max="32" value="8" style="width:70px">
+          <span id="size-value">8</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="visualization-section">
+      <div id="canvas-container" class="visualizer__canvas">
+        <!-- Bars rendered by Visualizer.js -->
+      </div>
+      <div class="visualizer__info">
+        <span id="step-count" class="visualizer__step">단계 <strong>0</strong> / 0</span>
+        <span id="step-description" class="step-description">배열을 생성하고 시작하세요</span>
+      </div>
+    </section>
+
+    <section class="education-section">
+      <div class="code-panel">
+        <div class="code-panel__header">의사코드</div>
+        <div id="pseudocode" class="code-panel__body">
+          <!-- Lines rendered by CodePanel.js -->
+        </div>
+      </div>
+
+      <div class="statistics">
+        <div class="statistics__header">통계</div>
+        <div class="stat-row">
+          <span class="stat-row__label">비교 횟수</span>
+          <span id="comparison-count" class="stat-row__value">0</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-row__label">이동 횟수</span>
+          <span id="move-count" class="stat-row__value">0</span>
+        </div>
+        <div class="complexity">
+          <div class="complexity__item">
+            <span class="complexity__label">시간</span>
+            <span class="complexity__value">O(n log n)</span>
+          </div>
+          <div class="complexity__item">
+            <span class="complexity__label">공간</span>
+            <span class="complexity__value">O(n)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="control-bar" role="navigation" aria-label="재생 컨트롤">
+      <div class="playback-controls">
+        <button id="btn-reset" class="controls__btn" title="초기화" aria-label="초기화">⟲</button>
+        <button id="btn-prev" class="controls__btn" title="이전 단계" aria-label="이전 단계">◀</button>
+        <button id="btn-play" class="controls__btn controls__btn--primary" title="재생" aria-label="재생">▶</button>
+        <button id="btn-next" class="controls__btn" title="다음 단계" aria-label="다음 단계">▶▶</button>
+      </div>
+
+      <div class="speed-control">
+        <label class="speed-control label">
+          속도
+          <input type="range" id="speed-slider" class="controls__slider" min="1" max="10" value="5">
+        </label>
+      </div>
+
+      <div class="progress-control">
+        <span class="progress-label" id="step-count-bar">0 / 0</span>
+        <progress id="progress-bar" class="progress-bar" value="0" max="100"></progress>
+      </div>
+    </nav>
+
+    <footer class="app-footer">
+      <span class="app-footer__complexity">O(n log n)</span>&nbsp;시간&nbsp;|&nbsp;
+      <span class="app-footer__complexity">O(n)</span>&nbsp;공간
+    </footer>
+  </div>
+
+</body>
+</html>

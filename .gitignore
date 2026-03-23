@@ -1,0 +1,14 @@
+node_modules/
+
+.claude/screenshots/
+.claude/references/
+.claude/research-*
+.claude/step*
+.claude/jscpd-*
+.claude/knip-*
+.claude/tokei-*
+.claude/awwwards-*
+.claude/step_archive/outputs/
+*.log
+playwright-*.cjs
+playwright-*.js
